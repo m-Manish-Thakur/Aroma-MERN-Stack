@@ -1,0 +1,161 @@
+/* ########################   HOME  ################################### */
+.offer {
+  background-color: black;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  font-family: "jost", sans-serif;
+  letter-spacing: 0.3px;
+}
+.offer span {
+  font-family: "jost", sans-serif;
+  letter-spacing: 0.2px;
+  color: rgb(230, 166, 49);
+  text-decoration: underline;
+}
+.offer span:hover {
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+/* #########################   Sections  ########################### */
+
+#sections {
+  width: 100vw;
+  padding: 25px 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#sections .con {
+  width: 400px;
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 30px 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+#sections .con h3 {
+  font-family: "jost", sans-serif;
+  font-weight: bold;
+  color: white;
+  bottom: 0;
+  letter-spacing: 0.8px;
+  transform: translateY(20px);
+}
+#sections .con button {
+  font-family: "jost", sans-serif;
+  font-weight: bold;
+  color: rgb(230, 166, 49);
+  bottom: 0;
+  letter-spacing: 2px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(230, 166, 49);
+  transform: translateY(60px);
+}
+#sections .con:hover button {
+  transform: translateY(-10px);
+}
+#sections .con:hover h3 {
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 850px) {
+  #sections {
+    width: 100vw;
+    padding: 25px 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    flex-wrap: wrap;
+  }
+  #sections .con {
+    width: 90vw;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 30px 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+}
+
+
+/* ###########################   Login And Register  ####################### */
+
+#form{
+  width: 700px;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 50px 50px 150px 50px;
+  margin: 30px auto;
+}
+#form h3{
+  font-family: 'jost', sans-serif;
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: rgb(38, 45, 56);
+}
+#form p{
+  font-family: 'jost', sans-serif;
+  text-align: center;
+  margin-top: 5px;
+}
+#form form{
+  margin-top: 30px;
+}
+#form form label{
+  font-family: 'jost';
+  color: rgb(50, 50, 50);
+  font-weight: 600;
+  font-size: 17px;
+  margin-top: 25px;
+  letter-spacing: 0.3px;
+}
+#form form input{
+  padding: 10px;
+  font-family: 'jost';
+  font-size: 16px;
+  border: 1px solid rgb(206, 200, 200);
+  width: 100%;
+  margin-top: 10px;
+  outline: none;
+}
+#form form p{
+  text-align: left;
+  margin-top: 25px;
+  font-size: 17px;
+  color: rgb(75, 75, 75);
+}
+#form form p span{
+  color: orangered;
+  font-family: 'jost';
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+#form form button{
+  background-color: #FF2020;
+  border: none;
+  padding: 12px 25px;
+  font-family: 'jost';
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  color: white;
+  margin-top: 20px;
+  float: right;
+}

@@ -1,0 +1,155 @@
+.topNav{
+    padding: 5px 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(222, 222, 222);
+    background-color: #23333d;
+    color: rgb(221, 221, 221);
+}
+.topNav div{
+    display: flex;
+}
+.topNav div p{
+    font-family: 'jost', sans-serif;
+    margin: 0 18px;
+    font-size: 15px;
+}
+.topNav div i{
+    margin: 0 10px;
+    font-size: 15px;
+    color: rgb(145, 145, 145);
+}
+
+/* #########################     HEADER      ###################################### */
+header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 50;
+    padding: 22px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    box-shadow: rgba(84, 79, 79, 0.2) 0px 2px 8px 0px;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+header nav a{
+    color: rgb(50, 50, 54);
+    text-decoration: none;
+    font-family: 'josefin sans';
+    font-weight: 700;
+    margin: 0 20px;
+    font-size: 17px;
+    letter-spacing: 0.3px;
+}
+header .rightNav{
+    display: flex;
+    align-items: center;
+}
+header .rightNav img{
+    height: 25px;
+    margin: 0 12px;
+}
+header .rightNav .badge{
+    position: absolute;
+    top: -8px;
+    right: -2px;
+    background-color: orangered;
+    padding: 5px 8px;
+    border-radius: 50%;
+}
+
+
+/* #######################    Carasual    #################### */
+
+.carousel-inner img{
+    width: 100vw;
+}
+@media screen and (max-width: 650px){
+    .carousel-inner img{
+        width: 100vw;
+        height: 200px;
+    }
+}
+
+
+
+
+
+/* #####################    FOOTER    ########################### */
+
+#footer{
+    width: 100vw;
+    padding: 50px 3vw;
+    background-color: rgb(28, 46, 76);
+  }
+  #footerContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(28, 46, 76);
+    row-gap: 50px;
+    margin-top: 50px;
+  }
+  #footer .item{
+    width: 200px;
+    display: flex;
+    flex-direction: column;   
+  }
+  #footer .item h2{
+    font-size: 23px;
+    font-family: 'poppins';
+    color: rgb(172, 200, 224);
+  }
+  #footer .item a{
+    margin-top: 15px;
+    color: rgb(115, 139, 161);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+  }   
+  
+  #footer .item h3{
+    font-size: 23px;
+    font-family: 'poppins';
+    color: rgb(215, 232, 247);
+    font-weight: 700;
+  }
+  #footer .item i{
+    color: rgb(215, 232, 247);
+    border: 1px solid rgb(215, 232, 247);
+    border-radius: 50%;
+    font-size: 17px;
+    padding-top: 11px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin: 20px 5px;
+    cursor: pointer;
+  }
+  #footer .item i:hover{
+    background-color: rgb(215, 232, 247);
+    color: rgb(28, 46, 76);
+  }
+  #footer .item p{
+    margin-top: 15px;
+    color: rgb(115, 139, 161);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }   
+  
+  
+  @media screen and (max-width: 500px){
+    #footerContainer{
+        justify-content: flex-start;
+        margin-top: 50px;
+    }
+  }
+  
