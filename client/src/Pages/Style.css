@@ -93,69 +93,339 @@
   }
 }
 
-
 /* ###########################   Login And Register  ####################### */
 
-#form{
+#form {
   width: 700px;
   background-color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 50px 50px 150px 50px;
   margin: 30px auto;
 }
-#form h3{
-  font-family: 'jost', sans-serif;
+#form h3 {
+  font-family: "jost", sans-serif;
   text-align: center;
   font-weight: 700;
   font-size: 30px;
   color: rgb(38, 45, 56);
 }
-#form p{
-  font-family: 'jost', sans-serif;
+#form p {
+  font-family: "jost", sans-serif;
   text-align: center;
   margin-top: 5px;
 }
-#form form{
+#form form {
   margin-top: 30px;
 }
-#form form label{
-  font-family: 'jost';
+#form form label {
+  font-family: "jost";
   color: rgb(50, 50, 50);
   font-weight: 600;
   font-size: 17px;
   margin-top: 25px;
   letter-spacing: 0.3px;
 }
-#form form input{
+#form form input {
   padding: 10px;
-  font-family: 'jost';
+  font-family: "jost";
   font-size: 16px;
   border: 1px solid rgb(206, 200, 200);
   width: 100%;
   margin-top: 10px;
   outline: none;
 }
-#form form p{
+#form form p {
   text-align: left;
   margin-top: 25px;
   font-size: 17px;
   color: rgb(75, 75, 75);
 }
-#form form p span{
+#form form p span {
   color: orangered;
-  font-family: 'jost';
+  font-family: "jost";
   letter-spacing: 0.5px;
   cursor: pointer;
 }
-#form form button{
-  background-color: #FF2020;
+#form form button {
+  background-color: #ff2020;
   border: none;
   padding: 12px 25px;
-  font-family: 'jost';
+  font-family: "jost";
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1.5px;
   color: white;
   margin-top: 20px;
   float: right;
+}
+
+/* #######################   Products Container   ####################### */
+#mens_fashion {
+  padding: 20px 6vw;
+}
+#mens_fashion .header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#mens_fashion .header h2 {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  margin-top: 10px;
+  font-weight: bold;
+}
+#mens_fashion .header p {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  color: rgb(143, 143, 143);
+  margin-bottom: 0;
+}
+#mens_fashion .header .filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px;
+}
+#mens_fashion .header select {
+  width: 120px;
+}
+#mens_fashion .header .filter button {
+  padding: 6px 15px;
+  text-align: center;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(92, 91, 91);
+  box-shadow: rgba(57, 56, 56, 0) 0px 5px 20px 0px,
+    rgba(53, 53, 53, 0.153) 0px 0px 0px 1px;
+  display: flex;
+  align-items: center;
+}
+#mens_fashion .header .filter button:hover {
+  background-color: rgb(242, 241, 241);
+  color: black;
+}
+#shimmerUI_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 50px;
+}
+
+@media screen and (max-width: 640px) {
+  #mens_fashion .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px;
+    position: sticky;
+    top: -18px;
+    z-index: 9;
+    background-color: white;
+    padding: 5px 0;
+  }
+  #mens_fashion .header .filter {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-top: 10px;
+  }
+}
+#mens_fashion #products_con {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 25px;
+}
+@media screen and (max-width: 700px) {
+  #mens_fashion {
+    padding: 20px 0vw;
+  }
+}
+
+/* ######################    Product Details Page   ########################## */
+
+#productDetails {
+  padding: 40px 5vw;
+  font-family: "Roboto", sans-serif;
+}
+#productDetails .product_container {
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: rgba(95, 95, 95, 0.2) 0px 0px 1px 1px;
+  border-radius: 5px;
+  padding: 0;
+  width: 100%;
+}
+#productDetails .image {
+  width: 30vw;
+}
+#productDetails .image img {
+  width: 100%;
+}
+#productDetails .details {
+  padding: 50px 0 0 100px;
+  width: 50vw;
+}
+#productDetails .name {
+  font-size: 22px;
+  font-family: "poppins", sans-serif;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+#productDetails .price {
+  font-size: 27px;
+  color: rgb(58, 58, 58);
+  font-family: "jost", sans-serif;
+  font-weight: bold;
+}
+#productDetails .cate {
+  color: rgb(98, 98, 98);
+  font-size: 17px;
+  font-family: "jost", sans-serif;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+#productDetails .review {
+  display: flex;
+  justify-content: flex-start;
+}
+#productDetails .review_text {
+  color: royalblue;
+  font-family: "jost", sans-serif;
+  margin-left: 20px;
+  font-size: 17px;
+}
+#productDetails .desc {
+  color: rgb(102, 104, 107);
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  word-spacing: 2px;
+}
+#productDetails .colors p {
+  font-size: 16px;
+  color: rgb(36, 35, 35);
+  font-family: "poppins", sans-serif;
+  margin-bottom: 10px;
+}
+#productDetails .color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0 5px;
+}
+#productDetails .buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+#productDetails button {
+  background-color: rgb(76, 113, 235);
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  padding: 10px 25px;
+  width: 250px;
+  letter-spacing: 0.3px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 20px;
+}
+#productDetails .addtobag {
+  background-color: rgb(226, 233, 239);
+  color: royalblue;
+  margin-left: 10px;
+}
+#productDetails button:hover {
+  background-color: rgb(58, 104, 204);
+}
+#productDetails .addtobag:hover {
+  background-color: rgb(211, 220, 228);
+  color: royalblue;
+}
+
+@media screen and (max-width: 1230px) {
+  #productDetails .details {
+    padding: 50px 0 0 100px;
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 1030px) {
+  #productDetails .details {
+    padding: 0px 0 0 50px;
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  #productDetails {
+    padding: 40px 3vw;
+  }
+  #productDetails .image {
+    width: 35vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #productDetails {
+    padding: 0px 3vw;
+  }
+  #productDetails .product_container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #productDetails .image {
+    width: 50vw;
+  }
+  #productDetails .details {
+    padding: 20px 50px;
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  #productDetails {
+    padding: 0;
+  }
+  #productDetails .image {
+    width: 80vw;
+    padding-top: 10px;
+  }
+  #productDetails .details {
+    padding: 20px 15px;
+    width: 100vw;
+  }
+}
+
+#skeleton{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#skeleton .img{
+  background-color: rgb(228, 228, 228);
+  height: 500px;
+  width: 450px;
+}
+#skeleton #text{
+  height: 500px;
+  padding: 30px 0 0 100px;
+  width: 50vw;
+}
+#skeleton #text .line{
+  background-color: rgb(228, 228, 228);
+  height: 20px;
+  margin-top: 20px;
+  width: 100%;
 }

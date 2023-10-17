@@ -4,22 +4,27 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
+// Routes
+const userRoute = require("./Routes/User");
+const productRoute = require("./Routes/Products");
+const cartRoute = require("./Routes/Cart");
+
 //  Connect MongoDB
 const DB =
   "mongodb+srv://Mern-Stack-Aroma:ManishThakurAroma202121@cluster0.y8skyqp.mongodb.net/aroma-e-commerce?retryWrites=true&w=majority";
 
-// Routes
-const userRoute = require("./Routes/User");
-
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-app.use("/user", userRoute);
+app.use("/uploads", express.static("uploads"));
 
 app.get("/", (req, res) => {
   res.json("Welcome to Aroma E-Commerce");
 });
+
+app.use("/user", userRoute);
+app.use("/api", productRoute);
+app.use("/cart", cartRoute);
 
 //  Port
 

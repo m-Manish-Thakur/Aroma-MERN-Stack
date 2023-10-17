@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import "./Style.css";
 import Carasual from "../Components/Carasual";
 
@@ -14,7 +14,7 @@ const Home = () => {
       <Carasual />
 
       <div id="sections">
-        <Link to="/Men_Product" style={{textDecoration:'none'}}>
+        <Link to="/products/mens" style={{ textDecoration: "none" }}>
           <div
             className="con"
             style={{
@@ -28,18 +28,19 @@ const Home = () => {
             </Link>
           </div>
         </Link>
-        
-        <div
-          className="con"
-          style={{
-            backgroundImage:
-              'linear-gradient(to top, rgb(10,10,10) 2%, transparent 60%), url("Images/women1.png")',
-          }}
-        >
-          <h3>Women's fashion</h3>
-          <button>Shop Now</button>
-        </div>
 
+        <Link to="/products/womens" style={{ textDecoration: "none" }}>
+          <div
+            className="con"
+            style={{
+              backgroundImage:
+                'linear-gradient(to top, rgb(10,10,10) 2%, transparent 60%), url("Images/women1.png")',
+            }}
+          >
+            <h3>Women's fashion</h3>
+            <button>Shop Now</button>
+          </div>
+        </Link>
         <div
           className="con"
           style={{
