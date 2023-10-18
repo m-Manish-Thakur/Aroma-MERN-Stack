@@ -26,13 +26,13 @@ header {
   position: sticky;
   top: 0;
   background-color: white;
-  z-index: 50;
+  z-index: 9;
   padding: 22px 5vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  box-shadow: rgba(224, 224, 224, 0.2) 0px 2px 5px 0px;
+  box-shadow: rgba(134, 132, 132, 0.2) 0px 2px 5px 0px;
 }
 header nav {
   display: flex;
@@ -55,6 +55,7 @@ header .rightNav {
 header .rightNav img {
   height: 25px;
   margin: 0 12px;
+  cursor: pointer;
 }
 header .rightNav .badge {
   position: absolute;
@@ -64,6 +65,40 @@ header .rightNav .badge {
   padding: 5px 8px;
   border-radius: 50%;
 }
+#dropDownBox{
+  background-color: #ffffff;
+  width: 150px;
+  position: absolute;
+  top: 40px;
+  right: -100px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(208, 208, 208);
+  text-align: center;
+}
+#dropDownBox p{
+  font-family: 'jost';
+  color: #23333d;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+#dropDownBox button{
+  width: 100%;
+  background-color: orangered;
+  color: #ffffff;
+  padding: 5px 20px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
+  font-family: 'jost';
+  letter-spacing: 0.5px;
+}
+
 
 /* #######################    Carasual    #################### */
 

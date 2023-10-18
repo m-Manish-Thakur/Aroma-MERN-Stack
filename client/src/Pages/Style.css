@@ -162,6 +162,7 @@
 /* #######################   Products Container   ####################### */
 #mens_fashion {
   padding: 20px 6vw;
+  background-color: rgb(244, 247, 250);
 }
 #mens_fashion .header {
   width: 100%;
@@ -428,4 +429,170 @@
   height: 20px;
   margin-top: 20px;
   width: 100%;
+}
+
+
+/* #########################     USER Profile     ##############################3 */
+
+#userProfile{
+  min-height: 100vh;
+  width: 100%;
+  padding: 30px 5vw;
+  background-color: rgb(243, 247, 250);
+}
+#userProfile h1{
+  font-size: 30px;
+  font-family: 'roboto';
+  font-weight: 700;
+}
+#userProfile .container{
+  width: 700px;
+  margin: 20px auto;
+  background-color: white;
+  border: 1px solid gainsboro;
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+#userProfile .details{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 25px;
+  border-bottom: 1px solid rgb(206, 200, 200);
+}
+#userProfile .details .img{
+  width: 70px;
+  height: 70px;
+  background-color: gainsboro;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 17px;
+  font-size: 25px;
+  font-weight: 700;
+}
+#userProfile .details h4{
+  font-size: 20px;
+  margin-left: 20px;
+  font-family: 'poppins';
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  letter-spacing: 0.3px;
+}
+#userProfile .details p{
+  font-size: 16px;
+  margin-left: 20px;
+  font-family: 'poppins';
+  color: rgb(102, 104, 107);
+}
+#userProfile .address{
+  padding: 20px 25px;
+  font-family: 'poppins';
+  border-bottom: 1px solid rgb(206, 200, 200);
+}
+#userProfile .address h4{
+  font-size: 19px;
+  font-family: 'rubik';
+  font-weight: 600;
+  margin-top: 10px;
+  letter-spacing: 0.3px;
+}
+#userProfile .address p{
+  font-size: 16px;
+  font-family: 'poppins';
+  color: rgb(102, 104, 107);
+  margin-top: 10px;
+  line-height: 28px;
+}
+#userProfile .address p span{
+  font-weight: 600;
+  color: #ff2020;
+  cursor: pointer;
+  font-family: 'poppins';
+  text-decoration: underline;
+  letter-spacing: 0.3px;
+}
+
+#userProfile .address button{
+  padding: 8px 16px;
+  background-color: rgb(21, 23, 24);
+  color: aliceblue;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  border: none;
+}
+#userProfile .logout{
+  width: 100%;
+  padding: 20px 25px;
+  font-family: 'poppins';
+  font-weight: 600;
+  color: #ff2020;
+  font-size: 20px;
+  border: 1px solid rgb(206, 200, 200);
+  margin-top: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#userProfile .logout:hover{
+  background-color: rgb(246, 237, 225);
+}
+
+#addrform{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(110, 110, 110, 0.411);
+  position: fixed;
+  top: 0;
+  display: flex;align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+#addrform h2{
+  font-weight: 700;
+  font-size: 23px;
+  letter-spacing: 0.5px;
+  font-family: 'poppins';
+}
+#addrform .container{
+  width: 700px;
+  padding: 30px 25px;
+  border-radius: 0px;
+  border: 1px solid gainsboro;
+  background-color: white;
+}
+#addrform .container input{
+  padding: 10px;
+  font-family: "jost";
+  font-size: 16px;
+  border: 1px solid rgb(206, 200, 200);
+  width: 100%;
+  margin-top: 10px;
+  outline: none;
+  margin-top: 20px;
+}
+#addrform .container button{
+  background-color: rgb(0, 0, 0);
+  border: none;
+  padding: 12px 25px;
+  font-family: "jost";
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  color: white;
+  margin-top: 20px;
+  float: right;
+}
+#addrform .container button:hover{
+  background-color: rgb(49, 50, 50);
+}
+#addrform .container .close{
+  background-color: rgb(217, 217, 217);
+  color: rgb(38, 39, 40);
+  margin-right: 20px;
+  font-weight: 600;
+}
+#addrform .container .close:hover{
+  background-color: rgb(234, 234, 234);
 }

@@ -13,7 +13,6 @@ const Mens = () => {
       .get("http://localhost:8000/api/products/mens")
       .then((response) => {
         setProducts(response.data);
-        console.log(Products);
       })
       .catch((error) => {
         console.error(error);

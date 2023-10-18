@@ -8,6 +8,7 @@ const cors = require("cors");
 const userRoute = require("./Routes/User");
 const productRoute = require("./Routes/Products");
 const cartRoute = require("./Routes/Cart");
+const addressRoute = require("./Routes/Address");
 
 //  Connect MongoDB
 const DB =
@@ -25,6 +26,7 @@ app.get("/", (req, res) => {
 app.use("/user", userRoute);
 app.use("/api", productRoute);
 app.use("/cart", cartRoute);
+app.use("/address", addressRoute);
 
 //  Port
 

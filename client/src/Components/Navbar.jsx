@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Style.css";
 import { Link } from "react-router-dom";
 import UserContext from "../Contexts/UserContext";
 
 const Navbar = () => {
   const { user } = useContext(UserContext);
+  const [dropdown, setDropDown] = useState(false);
 
   return (
     <>
@@ -38,7 +39,6 @@ const Navbar = () => {
           <Link to="/products/kids">
             <a href="#">Kid's Collection</a>
           </Link>
-          
 
           {user ? (
             ""
@@ -50,7 +50,35 @@ const Navbar = () => {
         </nav>
         <div className="rightNav">
           <img src="Images/search.png" alt="search" />
-          <Link to='/profile'><img src="Images/user.png" alt="profile" /></Link>
+          {/* <Link to="/profile"> */}
+          <div class="dropdown">
+            <img
+              src="Images/user.png"
+              alt="profile"
+              onClick={() =>
+                setDropDown((prev) => {
+                  setDropDown(!prev);
+                })
+              }
+            />
+            <div
+              id="dropDownBox"
+              style={dropdown ? { display: "block" } : { display: "none" }}
+            >
+              {user ? (
+                <>
+                  <Link to="/user/profile" onClick={()=> setDropDown(false)}><p>My Account</p></Link>
+                  <button>Logout</button>
+                </>
+              ) : (
+                <>
+                  <p>Login</p>
+                  <button>Register</button>
+                </>
+              )}
+            </div>
+          </div>
+          {/* </Link> */}
           <div style={{ position: "relative" }}>
             <img src="Images/cart.png" alt="cart" />
             <span className="badge">0</span>
