@@ -4,7 +4,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 import Rating from "@mui/material/Rating";
-import Stack from "@mui/material/Stack";
+import { Stack } from "@mui/system";
 
 const ProductDetails = () => {
   const { productId } = useParams();

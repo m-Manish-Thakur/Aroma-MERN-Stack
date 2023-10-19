@@ -4,6 +4,9 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import UserContext from "../Contexts/UserContext";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Profile = () => {
   const { user } = useContext(UserContext);
   const [addrFrom, setAddrForm] = useState(false);
@@ -25,7 +28,7 @@ const Profile = () => {
         .catch((err) => {
           console.log(err);
         });
-    } 
+    }
   }, [user, address]);
 
   // Handle Add Address From ------------------
@@ -43,11 +46,31 @@ const Profile = () => {
       })
       .then((response) => {
         setAddress(response.data);
+        setStreet("");
+        setCity(""); 
+        setState("");
+        setCountry("")
+        setPostalCode("");
+        toast.success("Address Added");
       })
       .catch((err) => {
         console.log(err);
       });
-      setAddrForm(false);
+    setAddrForm(false);
+  };
+
+  // Handle Delete Address
+  const handleDelete = (e) => {
+    e.preventDefault();
+    axios
+      .delete(`http://localhost:8000/address/delete-address/${address[0]._id}`)
+      .then((response) => {
+        setAddress([]);
+        toast.success("Address Deleted");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
@@ -78,7 +101,9 @@ const Profile = () => {
                   <br /> {address[0].city}, {address[0].postalCode},
                   <br /> {address[0].state}, {address[0].country}
                 </p>
-                <button>Update Address</button>
+                <button className="delete" onClick={handleDelete}>
+                  Delete Address
+                </button>
               </>
             ) : (
               <>
@@ -112,6 +137,7 @@ const Profile = () => {
         style={addrFrom ? { display: "flex" } : { display: "none" }}
       >
         <div className="container">
+          <span id="close" onClick={()=> setAddrForm(false)}><i class="fa-solid fa-xmark"></i></span>
           <h2>Manage Address</h2>
           <form onSubmit={handleAddrForm}>
             <input
@@ -145,9 +171,6 @@ const Profile = () => {
               onChange={(e) => setCountry(e.target.value)}
             />
             <button type="submit">Add Address</button>
-            <button className="close" onClick={() => setAddrForm(false)}>
-              Close
-            </button>
           </form>
         </div>
       </div>

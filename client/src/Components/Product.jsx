@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Style.css";
 
 import Rating from "@mui/material/Rating";
-import Stack from "@mui/material/Stack";
+import { Stack } from "@mui/system";
 
 const Product = ({ item }) => {
   return (

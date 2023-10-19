@@ -3,9 +3,11 @@ import "./Style.css";
 import { Link } from "react-router-dom";
 import UserContext from "../Contexts/UserContext";
 
+import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+
 const Navbar = () => {
   const { user } = useContext(UserContext);
-  const [dropdown, setDropDown] = useState(false);
 
   return (
     <>
@@ -50,35 +52,7 @@ const Navbar = () => {
         </nav>
         <div className="rightNav">
           <img src="Images/search.png" alt="search" />
-          {/* <Link to="/profile"> */}
-          <div class="dropdown">
-            <img
-              src="Images/user.png"
-              alt="profile"
-              onClick={() =>
-                setDropDown((prev) => {
-                  setDropDown(!prev);
-                })
-              }
-            />
-            <div
-              id="dropDownBox"
-              style={dropdown ? { display: "block" } : { display: "none" }}
-            >
-              {user ? (
-                <>
-                  <Link to="/user/profile" onClick={()=> setDropDown(false)}><p>My Account</p></Link>
-                  <button>Logout</button>
-                </>
-              ) : (
-                <>
-                  <p>Login</p>
-                  <button>Register</button>
-                </>
-              )}
-            </div>
-          </div>
-          {/* </Link> */}
+          <Link to='/user/profile' style={{textDecoration:'none'}}><i class="fa-regular fa-user"></i></Link>
           <div style={{ position: "relative" }}>
             <img src="Images/cart.png" alt="cart" />
             <span className="badge">0</span>

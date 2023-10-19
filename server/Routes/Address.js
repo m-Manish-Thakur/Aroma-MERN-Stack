@@ -16,32 +16,21 @@ router.post("/add-address", async (req, res) => {
       postalCode,
       country,
     });
-    console.log(address);
     res.status(201).json(address);
   } catch (error) {
     res.status(500).json({ error: "Error adding address" });
   }
 });
 
-// Update an existing address
-router.put("/edit-address/:addressId", async (req, res) => {
+// Delete user's adderess
+router.delete("/delete-address/:addressId", async (req, res) => {
   const addressId = req.params.addressId;
-  const { street, city, state, postalCode, country } = req.body;
   try {
-    const updatedAddress = await Address.findByIdAndUpdate(
-      addressId,
-      {
-        street,
-        city,
-        state,
-        postalCode,
-        country,
-      },
-      { new: true }
-    );
-    res.status(200).json(updatedAddress);
+    // If the checks pass, you can proceed to delete the address
+    await Address.findByIdAndRemove(addressId);
+    res.status(204).end();
   } catch (error) {
-    res.status(500).json({ error: "Error updating address" });
+    res.status(500).json({ error: "Error fetching addresses" });
   }
 });
 

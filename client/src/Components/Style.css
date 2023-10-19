@@ -57,6 +57,12 @@ header .rightNav img {
   margin: 0 12px;
   cursor: pointer;
 }
+header .rightNav i{
+  margin: 0 12px;
+  cursor: pointer;
+  font-size: 25px;
+  color: #23333d;
+}
 header .rightNav .badge {
   position: absolute;
   top: -8px;
@@ -65,40 +71,6 @@ header .rightNav .badge {
   padding: 5px 8px;
   border-radius: 50%;
 }
-#dropDownBox{
-  background-color: #ffffff;
-  width: 150px;
-  position: absolute;
-  top: 40px;
-  right: -100px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid rgb(208, 208, 208);
-  text-align: center;
-}
-#dropDownBox p{
-  font-family: 'jost';
-  color: #23333d;
-  font-weight: 600;
-  font-size: 17px;
-  cursor: pointer;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
-}
-#dropDownBox button{
-  width: 100%;
-  background-color: orangered;
-  color: #ffffff;
-  padding: 5px 20px;
-  text-align: center;
-  border: none;
-  border-radius: 2px;
-  font-size: 16px;
-  font-family: 'jost';
-  letter-spacing: 0.5px;
-}
-
 
 /* #######################    Carasual    #################### */
 
