@@ -33,10 +33,13 @@ app.use("/address", addressRoute);
 app.listen(8000, () => {
   console.log("Server Started");
   mongoose
-    .connect(DB, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    })
+    .connect(
+      "mongodb+srv://Mern-Stack-Aroma:ManishThakurAroma202121@cluster0.y8skyqp.mongodb.net/aroma-e-commerce?retryWrites=true&w=majority",
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    )
     .then(() => {
       console.log("Database Connected");
     })
