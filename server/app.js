@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 // Routes
-const userRoute = require("./Routes/User");
+// const userRoute = require("./Routes/User");
 const productRoute = require("./Routes/Products");
 const cartRoute = require("./Routes/Cart");
 const addressRoute = require("./Routes/Address");
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
   res.json("Welcome to Aroma E-Commerce");
 });
 
-app.use("/user", userRoute);
+// app.use("/user", userRoute);
 app.use("/api", productRoute);
 app.use("/cart", cartRoute);
 app.use("/address", addressRoute);
