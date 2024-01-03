@@ -14,7 +14,11 @@ const addressRoute = require("./Routes/Address");
 const DB =
   "mongodb+srv://Mern-Stack-Aroma:ManishThakurAroma202121@cluster0.y8skyqp.mongodb.net/aroma-e-commerce?retryWrites=true&w=majority";
 
-app.use(cors());
+app.use(cors(
+  origin:"https://fastidious-manatee-3aa654.netlify.app", 
+  methods: ["POST", "GET", "DELETE"], 
+  credentials: true
+));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/uploads", express.static("uploads"));
@@ -30,7 +34,7 @@ app.use("/address", addressRoute);
 
 //  Port
 
-app.listen(8000, () => {
+app.listen(8800, () => {
   console.log("Server Started");
   mongoose
     .connect(
